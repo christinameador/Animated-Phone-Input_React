@@ -1,0 +1,70 @@
+body {
+  margin: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+body input, body h1, body a {
+  color: #5a5a5a;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0px;
+  padding: 0px;
+}
+
+#app {
+  background: linear-gradient(to right, #fc8dd4, #78ffd6);
+  height: 100vh;
+  width: 100vw;
+}
+#app #phone-number {
+  height: 80px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+#app #phone-number .digit {
+  display: inline-block;
+  position: relative;
+}
+#app #phone-number .digit:nth-child(3), #app #phone-number .digit:nth-child(6) {
+  margin-right: 20px;
+}
+#app #phone-number .digit input {
+  border-radius: 5px;
+  border: none;
+  font-size: 0em;
+  height: 80px;
+  line-height: 80px;
+  margin-right: 10px;
+  outline: none;
+  text-align: center;
+  width: 60px;
+}
+#app #phone-number .digit input:focus {
+  box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.25);
+}
+#app #phone-number .digit input:focus + .underline {
+  display: block;
+}
+#app #phone-number .digit .underline {
+  background-color: #fc8dd4;
+  bottom: 15px;
+  display: none;
+  height: 2px;
+  left: 15px;
+  position: absolute;
+  width: 30px;
+}
+#app #phone-number .digit .digit-overlay {
+  font-size: 2.5em;
+  height: 80px;
+  line-height: 80px;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  transition: all 1s;
+  width: 60px;
+  z-index: 2;
+}
